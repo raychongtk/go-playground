@@ -26,4 +26,9 @@ func main() {
 	for index, str := range stringArray {
 		fmt.Println(index, str)
 	}
+
+	str := "hello, world!"
+	for i, s := range str {
+		fmt.Printf("%d %c\n", i, s)
+	}
 }
