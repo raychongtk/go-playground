@@ -13,7 +13,14 @@ func main() {
 	fmt.Printf("min=%d, max=%d\n", min, max)
 
 	text := "0123456789"
-	text2 := "0123456789abcd"
+	text2 := "       0123456789abcd       "
 	fmt.Println(myText.IsNumber(text))
 	fmt.Println(myText.IsNumber(text2))
+
+	var str string
+	str = "aaaa"
+	fmt.Println(myText.IsEmpty(str))
+
+	fmt.Println(myText.TrimLeft(text2))
+	fmt.Println(myText.TrimRight(text2))
 }
