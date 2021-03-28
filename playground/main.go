@@ -39,4 +39,9 @@ func main() {
 	var elements []string
 	elements = append(elements, "test", "test1", "test2", "test3", "test4", "test5", "test6", "test7")
 	fmt.Println(myText.Join(elements, ", "))
+
+	fmt.Println(myUtil.Mask(text))
+	fmt.Println(myUtil.Mask("1"))
+	fmt.Println(myUtil.MaskLeft(text))
+	fmt.Println(myUtil.MaskLeft("1"))
 }
