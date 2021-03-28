@@ -4,6 +4,7 @@ import (
 	"fmt"
 	myMath "playground/math"
 	myText "playground/text"
+	myUtil "playground/util"
 )
 
 func main() {
@@ -21,8 +22,16 @@ func main() {
 	str = "aaaa"
 	fmt.Println(myText.IsEmpty(str))
 
+	// trim spaces
 	fmt.Println(myText.TrimLeft(text2))
 	fmt.Println(myText.TrimRight(text2))
 
+	// remove duplicated char
 	fmt.Println(myText.RemoveDuplicateCharacter(text))
+
+	// swapping value
+	num1 := 10
+	num2 := 20
+	myUtil.Swap(&num1, &num2)
+	fmt.Println(num1, num2)
 }
