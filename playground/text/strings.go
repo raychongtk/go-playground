@@ -1,5 +1,7 @@
 package text
 
+import "strings"
+
 func IsEmpty(text string) bool {
 	return len(text) == 0
 }
@@ -50,4 +52,17 @@ func RemoveDuplicateCharacter(text string) string {
 	}
 
 	return result
+}
+
+func Join(elements []string, separator string) string {
+	var builder strings.Builder
+
+	for _, element := range elements {
+		if builder.Len() > 0 {
+			builder.WriteString(separator)
+		}
+		builder.WriteString(element)
+	}
+
+	return builder.String()
 }

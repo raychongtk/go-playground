@@ -34,4 +34,9 @@ func main() {
 	num2 := 20
 	myUtil.Swap(&num1, &num2)
 	fmt.Println(num1, num2)
+
+	// join string
+	var elements []string
+	elements = append(elements, "test", "test1", "test2", "test3", "test4", "test5", "test6", "test7")
+	fmt.Println(myText.Join(elements, ", "))
 }
