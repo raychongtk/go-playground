@@ -35,3 +35,19 @@ func TrimRight(text string) string {
 
 	return result
 }
+
+func RemoveDuplicateCharacter(text string) string {
+	table := make(map[string]int)
+	var result string
+
+	for _, t := range text {
+		key := string(t)
+		if table[key] == 0 {
+			result += key
+		}
+
+		table[key] = 1
+	}
+
+	return result
+}

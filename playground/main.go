@@ -12,7 +12,7 @@ func main() {
 	max := myMath.FindMax(numbers)
 	fmt.Printf("min=%d, max=%d\n", min, max)
 
-	text := "0123456789"
+	text := "012345678999995"
 	text2 := "       0123456789abcd       "
 	fmt.Println(myText.IsNumber(text))
 	fmt.Println(myText.IsNumber(text2))
@@ -23,4 +23,6 @@ func main() {
 
 	fmt.Println(myText.TrimLeft(text2))
 	fmt.Println(myText.TrimRight(text2))
+
+	fmt.Println(myText.RemoveDuplicateCharacter(text))
 }
