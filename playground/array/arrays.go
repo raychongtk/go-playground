@@ -13,3 +13,16 @@ func SameArray(numbers1 []int, numbers2 []int) bool {
 
 	return true
 }
+
+func ReverseArray(numbers1 []int) {
+	start := 0
+	end := len(numbers1) - 1
+
+	for start < end {
+		temp := numbers1[start]
+		numbers1[start] = numbers1[end]
+		numbers1[end] = temp
+		start++
+		end--
+	}
+}

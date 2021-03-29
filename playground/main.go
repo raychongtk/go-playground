@@ -58,4 +58,8 @@ func main() {
 	fmt.Println(myText.ReverseString("ray"))
 	fmt.Println(myArray.SameArray([]int{1, 2, 3, 4, 5}, []int{1, 2, 3, 4, 5}))
 	fmt.Println(myArray.SameArray([]int{1, 2, 4, 4, 5}, []int{1, 2, 3, 4, 5}))
+
+	data := []int{1, 2, 4, 4, 5}
+	myArray.ReverseArray(data)
+	fmt.Println(data)
 }
