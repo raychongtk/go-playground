@@ -14,14 +14,14 @@ func SameArray(numbers1 []int, numbers2 []int) bool {
 	return true
 }
 
-func ReverseArray(numbers1 []int) {
+func ReverseArray(numbers []int) {
 	start := 0
-	end := len(numbers1) - 1
+	end := len(numbers) - 1
 
 	for start < end {
-		temp := numbers1[start]
-		numbers1[start] = numbers1[end]
-		numbers1[end] = temp
+		temp := numbers[start]
+		numbers[start] = numbers[end]
+		numbers[end] = temp
 		start++
 		end--
 	}
