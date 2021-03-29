@@ -9,8 +9,8 @@ type User struct {
 	email    string
 }
 
-func (user User) login(username string, password string) bool {
-	return username == "ray" && password == "123456"
+func (user User) login() bool {
+	return user.username == "ray" && user.password == "123456"
 }
 
 func main() {
@@ -19,5 +19,5 @@ func main() {
 	fmt.Println("id =", user.userId)
 	fmt.Println("username =", user.username)
 	fmt.Println("email =", user.email)
-	fmt.Println(user.login(user.username, user.password))
+	fmt.Println(user.login())
 }
