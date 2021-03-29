@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
-	myDS "playground/datastructure"
+	myArray "playground/datastructure/array"
+	myQueue "playground/datastructure/queue"
+	mySet "playground/datastructure/set"
 	myMath "playground/math"
 	myText "playground/text"
 	myUtil "playground/util"
@@ -56,20 +58,26 @@ func main() {
 
 	fmt.Println(myText.IsPalindrome("abccba"))
 	fmt.Println(myText.ReverseString("ray"))
-	fmt.Println(myDS.SameArray([]int{1, 2, 3, 4, 5}, []int{1, 2, 3, 4, 5}))
-	fmt.Println(myDS.SameArray([]int{1, 2, 4, 4, 5}, []int{1, 2, 3, 4, 5}))
+	fmt.Println(myArray.SameArray([]int{1, 2, 3, 4, 5}, []int{1, 2, 3, 4, 5}))
+	fmt.Println(myArray.SameArray([]int{1, 2, 4, 4, 5}, []int{1, 2, 3, 4, 5}))
 
 	data := []int{1, 2, 4, 4, 5}
-	myDS.ReverseArray(data)
+	myArray.ReverseArray(data)
 	fmt.Println(data)
 
-	myDS.Add("test")
-	myDS.Add("test1")
-	myDS.Add("test2")
-	myDS.Poll()
+	myQueue.Add("test")
+	myQueue.Add("test1")
+	myQueue.Add("test2")
+	myQueue.Poll()
 
-	queue := myDS.GetQueue()
+	queue := myQueue.GetQueue()
 	for e := queue.Front(); e != nil; e = e.Next() {
 		fmt.Println(e.Value)
 	}
+
+	mySet.Put("test")
+	fmt.Println(mySet.Contains("test"))
+	fmt.Println(mySet.Size())
+	mySet.Remove("test")
+	fmt.Println(mySet.Size())
 }

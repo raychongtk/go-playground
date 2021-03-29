@@ -1,4 +1,4 @@
-package datastructure
+package queue
 
 import "container/list"
 
