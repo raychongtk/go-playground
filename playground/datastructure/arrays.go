@@ -1,4 +1,4 @@
-package array
+package datastructure
 
 func SameArray(numbers1 []int, numbers2 []int) bool {
 	if len(numbers1) != len(numbers2) {

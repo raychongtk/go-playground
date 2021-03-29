@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	myArray "playground/array"
+	myDS "playground/datastructure"
 	myMath "playground/math"
 	myText "playground/text"
 	myUtil "playground/util"
@@ -56,10 +56,20 @@ func main() {
 
 	fmt.Println(myText.IsPalindrome("abccba"))
 	fmt.Println(myText.ReverseString("ray"))
-	fmt.Println(myArray.SameArray([]int{1, 2, 3, 4, 5}, []int{1, 2, 3, 4, 5}))
-	fmt.Println(myArray.SameArray([]int{1, 2, 4, 4, 5}, []int{1, 2, 3, 4, 5}))
+	fmt.Println(myDS.SameArray([]int{1, 2, 3, 4, 5}, []int{1, 2, 3, 4, 5}))
+	fmt.Println(myDS.SameArray([]int{1, 2, 4, 4, 5}, []int{1, 2, 3, 4, 5}))
 
 	data := []int{1, 2, 4, 4, 5}
-	myArray.ReverseArray(data)
+	myDS.ReverseArray(data)
 	fmt.Println(data)
+
+	myDS.Add("test")
+	myDS.Add("test1")
+	myDS.Add("test2")
+	myDS.Poll()
+
+	queue := myDS.GetQueue()
+	for e := queue.Front(); e != nil; e = e.Next() {
+		fmt.Println(e.Value)
+	}
 }
