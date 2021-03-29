@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	myArray "playground/array"
 	myMath "playground/math"
 	myText "playground/text"
 	myUtil "playground/util"
@@ -55,4 +56,6 @@ func main() {
 
 	fmt.Println(myText.IsPalindrome("abccba"))
 	fmt.Println(myText.ReverseString("ray"))
+	fmt.Println(myArray.SameArray([]int{1, 2, 3, 4, 5}, []int{1, 2, 3, 4, 5}))
+	fmt.Println(myArray.SameArray([]int{1, 2, 4, 4, 5}, []int{1, 2, 3, 4, 5}))
 }
