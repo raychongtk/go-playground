@@ -52,4 +52,7 @@ func main() {
 	fmt.Println(myUtil.Mask("1"))
 	fmt.Println(myUtil.MaskLeft(text))
 	fmt.Println(myUtil.MaskLeft("1"))
+
+	fmt.Println(myText.IsPalindrome("abccba"))
+	fmt.Println(myText.ReverseString("ray"))
 }

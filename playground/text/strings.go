@@ -66,3 +66,29 @@ func Join(elements []string, separator string) string {
 
 	return builder.String()
 }
+
+func IsPalindrome(text string) bool {
+	start := 0
+	end := len(text) - 1
+	chars := []rune(text)
+
+	for start < end {
+		if chars[start] != chars[end] {
+			return false
+		}
+		start++
+		end--
+	}
+
+	return true
+}
+
+func ReverseString(text string) string {
+	var builder strings.Builder
+
+	for i := len(text) - 1; i >= 0; i-- {
+		builder.WriteString(string(text[i]))
+	}
+
+	return builder.String()
+}
