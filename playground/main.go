@@ -13,9 +13,13 @@ func main() {
 	max := myMath.FindMax(numbers)
 	top1, top2 := myMath.TopTwoElements(numbers)
 	firstTop, secondTop, thirdTop := myMath.TopThreeElements(numbers)
+	runningSum := myMath.RunningSum(numbers)
+	sum := myMath.Sum(numbers)
 	fmt.Printf("min=%d, max=%d\n", min, max)
 	fmt.Println(top1, top2)
 	fmt.Println(firstTop, secondTop, thirdTop)
+	fmt.Println(runningSum)
+	fmt.Println(sum)
 
 	text := "012345678999995"
 	text2 := "       0123456789abcd       "
