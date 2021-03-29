@@ -11,7 +11,11 @@ func main() {
 	numbers := []int{5, 2, 1, 4, 5, 6, 8, 9, 0, 10}
 	min := myMath.FindMin(numbers)
 	max := myMath.FindMax(numbers)
+	top1, top2 := myMath.TopTwoElements(numbers)
+	firstTop, secondTop, thirdTop := myMath.TopThreeElements(numbers)
 	fmt.Printf("min=%d, max=%d\n", min, max)
+	fmt.Println(top1, top2)
+	fmt.Println(firstTop, secondTop, thirdTop)
 
 	text := "012345678999995"
 	text2 := "       0123456789abcd       "
