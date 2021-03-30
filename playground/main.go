@@ -12,6 +12,8 @@ import (
 
 func main() {
 	numbers := []int{5, 2, 1, 4, 5, 6, 8, 9, 0, 10}
+	singleNumbers := []int{4, 1, 2, 1, 2}
+	singleNumber := myMath.SingleNumber(singleNumbers)
 	min := myMath.FindMin(numbers)
 	max := myMath.FindMax(numbers)
 	top1, top2 := myMath.TopTwoElements(numbers)
@@ -23,6 +25,7 @@ func main() {
 	fmt.Println(firstTop, secondTop, thirdTop)
 	fmt.Println(runningSum)
 	fmt.Println(sum)
+	fmt.Println("single number:", singleNumber)
 
 	text := "012345678999995"
 	text2 := "       0123456789abcd       "
