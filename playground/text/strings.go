@@ -54,6 +54,18 @@ func RemoveDuplicateCharacter(text string) string {
 	return result
 }
 
+func IsContainingDuplicateCharacter(text string) bool {
+	asciiTable := make([]int, 26)
+
+	for _, c := range text {
+		if asciiTable[c-'a'] == 1 {
+			return true
+		}
+		asciiTable[c-'a'] += 1
+	}
+	return false
+}
+
 func Join(elements []string, separator string) string {
 	var builder strings.Builder
 

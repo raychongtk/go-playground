@@ -55,8 +55,9 @@ func main() {
 	fmt.Println(myUtil.Mask("1"))
 	fmt.Println(myUtil.MaskLeft(text))
 	fmt.Println(myUtil.MaskLeft("1"))
-
-	fmt.Println(myText.IsPalindrome("abccba"))
+	fmt.Println("containing duplicate:", myText.IsContainingDuplicateCharacter("apple"))
+	fmt.Println("containing duplicate:", myText.IsContainingDuplicateCharacter("ray"))
+	fmt.Println("is palindrome:", myText.IsPalindrome("abccba"))
 	fmt.Println(myText.ReverseString("ray"))
 	fmt.Println(myArray.SameArray([]int{1, 2, 3, 4, 5}, []int{1, 2, 3, 4, 5}))
 	fmt.Println(myArray.SameArray([]int{1, 2, 4, 4, 5}, []int{1, 2, 3, 4, 5}))
