@@ -27,6 +27,7 @@ func main() {
 	fmt.Println(runningSum)
 	fmt.Println(sum)
 	fmt.Println("single number:", singleNumber)
+	fmt.Println(myMath.SplitInteger(123456))
 
 	text := "012345678999995"
 	text2 := "       0123456789abcd       "
