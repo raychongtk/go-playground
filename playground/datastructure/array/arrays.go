@@ -19,10 +19,20 @@ func ReverseArray(numbers []int) {
 	end := len(numbers) - 1
 
 	for start < end {
-		temp := numbers[start]
-		numbers[start] = numbers[end]
-		numbers[end] = temp
+		numbers[start], numbers[end] = numbers[end], numbers[start]
 		start++
 		end--
+	}
+}
+
+// https://leetcode.com/problems/sort-array-by-parity/
+func SortArrayByParity(numbers []int) {
+	var index int
+
+	for i := 0; i < len(numbers); i++ {
+		if numbers[i]%2 == 0 {
+			numbers[index], numbers[i] = numbers[i], numbers[index]
+			index++
+		}
 	}
 }

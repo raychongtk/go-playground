@@ -69,6 +69,8 @@ func main() {
 	data := []int{1, 2, 4, 4, 5}
 	myArray.ReverseArray(data)
 	fmt.Println(data)
+	myArray.SortArrayByParity(data)
+	fmt.Println(data)
 
 	myQueue.Add("test")
 	myQueue.Add("test1")
