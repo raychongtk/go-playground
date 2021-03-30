@@ -12,10 +12,10 @@ type Shortener struct {
 	urlStore map[string]string
 }
 
-func NewShortener() Shortener {
+func NewShortener() *Shortener {
 	shortener := Shortener{}
 	shortener.urlStore = make(map[string]string)
-	return shortener
+	return &shortener
 }
 
 func (s *Shortener) Encode(url string) string {
