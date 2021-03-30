@@ -6,6 +6,7 @@ import (
 	myQueue "playground/datastructure/queue"
 	mySet "playground/datastructure/set"
 	myMath "playground/math"
+	myUrlShortener "playground/shortenurl"
 	myText "playground/text"
 	myUtil "playground/util"
 )
@@ -84,4 +85,8 @@ func main() {
 	fmt.Println(mySet.Size())
 	mySet.Remove("test")
 	fmt.Println(mySet.Size())
+
+	// url shortener
+	fmt.Println(myUrlShortener.Encode("https://golang.org/doc/tutorial/handle-errors"))
+	fmt.Println(myUrlShortener.Decode("https://short-url.com/d50fb44cc1"))
 }
