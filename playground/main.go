@@ -87,6 +87,11 @@ func main() {
 	fmt.Println(mySet.Size())
 
 	// url shortener
-	fmt.Println(myUrlShortener.Encode("https://golang.org/doc/tutorial/handle-errors"))
-	fmt.Println(myUrlShortener.Decode("https://short-url.com/d50fb44cc1"))
+	shortener := myUrlShortener.NewShortener()
+	fmt.Println(shortener.Encode("https://golang.org/doc/tutorial/handle-errors"))
+	decodedUrl, err := shortener.Decode("https://short-url.com/d50fb44cc1")
+	if err != nil {
+		panic("url not found")
+	}
+	fmt.Println(decodedUrl)
 }
