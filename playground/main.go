@@ -97,4 +97,6 @@ func main() {
 		panic("url not found")
 	}
 	fmt.Println(decodedUrl)
+
+	fmt.Println(myText.MergeString("abc", "pqr"))
 }
