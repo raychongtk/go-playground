@@ -44,7 +44,7 @@ func main() {
 
 	// remove duplicated char
 	fmt.Println(myText.RemoveDuplicateCharacter(text))
-
+	fmt.Println("word pattern", myText.WordPattern("abba", "dog cat cat dog"))
 	// swapping value
 	num1 := 10
 	num2 := 20
