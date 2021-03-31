@@ -1,8 +1,6 @@
 package text
 
-import (
-	"strings"
-)
+import "strings"
 
 /*
 	https://leetcode.com/problems/word-pattern/
