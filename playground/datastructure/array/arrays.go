@@ -36,3 +36,18 @@ func SortArrayByParity(numbers []int) {
 		}
 	}
 }
+
+// https://leetcode.com/problems/peak-index-in-a-mountain-array/
+func PeakIndex(arr []int) int {
+	max := 0
+	peak := -1
+
+	for i, num := range arr {
+		if num > max {
+			max = num
+			peak = i
+		}
+	}
+
+	return peak
+}

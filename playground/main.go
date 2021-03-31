@@ -72,6 +72,7 @@ func main() {
 	fmt.Println(data)
 	myArray.SortArrayByParity(data)
 	fmt.Println(data)
+	fmt.Println(myArray.PeakIndex(data))
 
 	myQueue.Add("test")
 	myQueue.Add("test1")
