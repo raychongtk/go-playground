@@ -51,3 +51,23 @@ func PeakIndex(arr []int) int {
 
 	return peak
 }
+
+// https://leetcode.com/problems/maximum-ascending-subarray-sum/
+func MaxAscendingSum(nums []int) int {
+	max := nums[0]
+	currentSum := nums[0]
+
+	for i := 1; i < len(nums); i++ {
+		if nums[i] > nums[i-1] {
+			currentSum += nums[i]
+		} else {
+			currentSum = nums[i]
+		}
+
+		if currentSum > max {
+			max = currentSum
+		}
+	}
+
+	return max
+}
