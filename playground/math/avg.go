@@ -1,8 +1,6 @@
 package math
 
-import (
-	"math"
-)
+import "math"
 
 // https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/
 func AvgWithoutMinMax(numbers []int) float64 {
