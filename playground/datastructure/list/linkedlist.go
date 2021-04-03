@@ -62,3 +62,15 @@ func swapNodes(head *ListNode, k int) *ListNode {
 
 	return list[0]
 }
+
+// https://leetcode.com/problems/middle-of-the-linked-list/
+func middleNode(head *ListNode) *ListNode {
+	slow, fast := head, head
+
+	for fast != nil && fast.Next != nil {
+		fast = fast.Next.Next
+		slow = slow.Next
+	}
+
+	return slow
+}
