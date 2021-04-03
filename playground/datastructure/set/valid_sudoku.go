@@ -20,14 +20,15 @@ func isValidSudoku(board [][]byte) bool {
 				continue
 			}
 
-			if rows[i][int(board[i][j]-'0')-1] || columns[j][int(board[i][j]-'0')-1] ||
-				partialSudoku[rowBucket+columnBucket][int(board[i][j]-'0')-1] {
+			partialIndex := rowBucket + columnBucket
+			value := int(board[i][j]-'0') - 1
+			if rows[i][value] || columns[j][value] || partialSudoku[partialIndex][value] {
 				return false
-			} else {
-				rows[i][int(board[i][j]-'0')-1] = true
-				columns[j][int(board[i][j]-'0')-1] = true
-				partialSudoku[rowBucket+columnBucket][int(board[i][j]-'0')-1] = true
 			}
+
+			rows[i][value] = true
+			columns[j][value] = true
+			partialSudoku[partialIndex][value] = true
 		}
 	}
 
