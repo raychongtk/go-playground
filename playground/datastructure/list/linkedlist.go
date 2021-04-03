@@ -47,3 +47,18 @@ func mergeInBetween(list1 *ListNode, a int, b int, list2 *ListNode) *ListNode {
 
 	return list1
 }
+
+// https://leetcode.com/problems/swapping-nodes-in-a-linked-list/
+func swapNodes(head *ListNode, k int) *ListNode {
+	list := make([]*ListNode, 0)
+	dummy := head
+
+	for dummy.Next != nil {
+		list = append(list, dummy)
+		dummy = dummy.Next
+	}
+
+	list[k-1].Val, list[len(list)-k].Val = list[len(list)-k].Val, list[k-1].Val
+
+	return list[0]
+}
