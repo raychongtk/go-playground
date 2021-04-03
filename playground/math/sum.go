@@ -1,5 +1,6 @@
 package math
 
+// https://leetcode.com/problems/running-sum-of-1d-array/
 func RunningSum(numbers []int) []int {
 	runningSum := make([]int, len(numbers))
 
@@ -19,4 +20,24 @@ func Sum(numbers []int) int {
 	}
 
 	return sum
+}
+
+func SumRecursion(numbers []int) int {
+	return sumRecursion(numbers, 0)
+}
+
+func sumRecursion(numbers []int, idx int) int {
+	if idx == len(numbers) {
+		return 0
+	}
+
+	return numbers[idx] + sumRecursion(numbers, idx+1)
+}
+
+func AccumulateSum(target int) int {
+	if target == 1 {
+		return 1
+	}
+
+	return target + AccumulateSum(target-1)
 }
