@@ -106,14 +106,28 @@ func ReverseString(text string) string {
 }
 
 func ReverseStringRecursion(text string) string {
-	return string(reverseStr([]rune(text), 0, len(text)-1))
+	return string(reverseStringRecursion([]rune(text), 0, len(text)-1))
 }
 
-func reverseStr(text []rune, idx1 int, idx2 int) []rune {
+func reverseStringRecursion(text []rune, idx1 int, idx2 int) []rune {
 	if idx1 == idx2 {
 		return text
 	}
 
 	text[idx1], text[idx2] = text[idx2], text[idx1]
-	return reverseStr(text, idx1+1, idx2-1)
+	return reverseStringRecursion(text, idx1+1, idx2-1)
+}
+
+func ReverseWord(text string) string {
+	builder := new(strings.Builder)
+	parts := strings.Split(text, " ")
+
+	for i := len(parts) - 1; i >= 0; i-- {
+		if builder.Len() > 0 {
+			builder.WriteString(" ")
+		}
+		builder.WriteString(parts[i])
+	}
+
+	return builder.String()
 }

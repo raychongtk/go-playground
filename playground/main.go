@@ -65,6 +65,7 @@ func main() {
 	fmt.Println("is palindrome:", myText.IsPalindrome("abccba"))
 	fmt.Println(myText.ReverseString("i go to school by bus"))
 	fmt.Println(myText.ReverseStringRecursion("i go to school by bus"))
+	fmt.Println(myText.ReverseWord("i go to school by bus"))
 	fmt.Println(myArray.SameArray([]int{1, 2, 3, 4, 5}, []int{1, 2, 3, 4, 5}))
 	fmt.Println(myArray.SameArray([]int{1, 2, 4, 4, 5}, []int{1, 2, 3, 4, 5}))
 
