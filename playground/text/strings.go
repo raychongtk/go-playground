@@ -104,3 +104,16 @@ func ReverseString(text string) string {
 
 	return builder.String()
 }
+
+func ReverseStringRecursion(text string) string {
+	return string(reverseStr([]rune(text), 0, len(text)-1))
+}
+
+func reverseStr(text []rune, idx1 int, idx2 int) []rune {
+	if idx1 == idx2 {
+		return text
+	}
+
+	text[idx1], text[idx2] = text[idx2], text[idx1]
+	return reverseStr(text, idx1+1, idx2-1)
+}
