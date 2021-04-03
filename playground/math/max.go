@@ -1,10 +1,10 @@
 package math
 
 func FindMax(numbers []int) int {
-	return max(numbers)
+	return findMax(numbers)
 }
 
-func max(numbers []int) int {
+func findMax(numbers []int) int {
 	max := 0
 
 	for _, num := range numbers {
