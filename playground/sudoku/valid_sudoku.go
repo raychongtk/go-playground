@@ -1,4 +1,4 @@
-package set
+package sudoku
 
 // https://leetcode.com/problems/valid-sudoku/
 func isValidSudoku(board [][]byte) bool {
