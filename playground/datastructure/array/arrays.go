@@ -71,3 +71,22 @@ func MaxAscendingSum(nums []int) int {
 
 	return max
 }
+
+// https://leetcode.com/problems/product-of-array-except-self/
+func ProductExceptSelf(nums []int) []int {
+	result := make([]int, len(nums))
+
+	temp := 1
+	for i := 1; i <= len(nums); i++ {
+		result[i-1] = temp
+		temp *= nums[i-1]
+	}
+
+	temp = 1
+	for i := len(nums) - 1; i >= 0; i-- {
+		result[i] *= temp
+		temp *= nums[i]
+	}
+
+	return result
+}
