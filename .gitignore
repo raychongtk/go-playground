@@ -2,6 +2,7 @@
 .idea/*
 
 go-playground.iml
+/pkg/
 
 # Binaries for programs and plugins
 *.exe
