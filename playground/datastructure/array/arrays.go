@@ -1,5 +1,7 @@
 package array
 
+import "sort"
+
 func SameArray(numbers1 []int, numbers2 []int) bool {
 	if len(numbers1) != len(numbers2) {
 		return false
@@ -101,4 +103,16 @@ func twoSum(nums []int, target int) []int {
 		}
 	}
 	return nil
+}
+
+func missingNumber(nums []int) int {
+	sort.Ints(nums)
+
+	for i := 0; i < len(nums); i++ {
+		if nums[i] != i {
+			return i
+		}
+	}
+
+	return len(nums)
 }
