@@ -133,3 +133,14 @@ func plusOne(digits []int) []int {
 	result := slices.Insert(digits, 0, 1)
 	return result
 }
+
+func reverseString(s []byte) {
+	var start int = 0
+	var end int = len(s) - 1
+
+	for start < end {
+		s[start], s[end] = s[end], s[start]
+		start++
+		end--
+	}
+}
